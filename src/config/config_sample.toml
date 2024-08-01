@@ -1,0 +1,221 @@
+[api]
+  ip = "127.0.0.1"
+  port = "5000"
+  http = "http"
+  email = "op://Server-Prod/ePrijzen Api Social-energie-prijzen-bot Login/username"
+  password = "op://Server-Prod/ePrijzen Api Social-energie-prijzen-bot Login/password"
+  salt = "op://Server-Prod/ePrijzen Api Social-energie-prijzen-bot Login/salt"
+
+[hashtags]
+  general = ["energie", "gasverbruik", "energieprijs", "kwhprijs", "m3prijs", "gas", "electra", "stroom", "energievergelijken"]
+  must = ["prijsplafond", "energiecrisis", "energierekening"]
+
+[socials]
+  [socials.reddit]
+    [socials.reddit.eprijzen]
+        activated = true
+        price_kind = "a"
+        price_below_zero_message = true
+        hourly_message = false
+        day_part_message_time = []
+        morning_message_time = 8
+        long_message_time = 17
+        country_message_time = 9
+        windsolar_message_time = 18
+        client_id = "op://Server-Prod/socials.reddit.eprijzen API Credential/client_id"
+        client_secret = "op://Server-Prod/socials.reddit.eprijzen API Credential/client_secret"
+        user_agent = "script by u/tvdsluijs"
+        redirect_uri = "http://localhost:8080"
+        refresh_token = "op://Server-Prod/socials.reddit.eprijzen API Credential/refresh_token"
+        subr = "op://Server-Prod/socials.reddit.eprijzen API Credential/subr"
+    [socials.reddit.eprijzenperuur]
+        activated = true
+        price_kind = "a"
+        price_below_zero_message = false
+        hourly_message = true
+        day_part_message_time = []
+        morning_message_time = false
+        long_message_time = false
+        country_message_time = false
+        windsolar_message_time = false
+        client_id = "op://Server-Prod/socials.reddit.eprijzenperuur API Credential/client_id"
+        client_secret = "op://Server-Prod/socials.reddit.eprijzenperuur API Credential/client_secret"
+        user_agent = "script by u/tvdsluijs"
+        redirect_uri = "http://localhost:8080"
+        refresh_token = "op://Server-Prod/socials.reddit.eprijzenperuur API Credential/refresh_token"
+        subr = "op://Server-Prod/socials.reddit.eprijzenperuur API Credential/subr"
+  [socials.twitter]
+    [socials.twitter.eiprijzen]
+      # Energie inkoop prijs per uur
+      activated = true
+      price_kind = "k" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = false
+      hourly_message = true
+      day_part_message_time = []
+      morning_message_time = false
+      long_message_time = false
+      country_message_time = 9
+      windsolar_message_time = 18
+      hashtags = ["energiecrisis", "energierekening", "energiearmoede", "gasprijs"]
+      [socials.twitter.eiprijzen.tokens]
+      # Consumer Keys
+        api_key = "op://Server-Prod/socials.twitter.eiprijzen API Credential/api_key"
+        api_key_secret = "op://Server-Prod/socials.twitter.eiprijzen API Credential/api_key_secret"
+        client_key = "op://Server-Prod/socials.twitter.eiprijzen API Credential/client_key"
+        client_key_secret = "op://Server-Prod/socials.twitter.eiprijzen API Credential/client_key_secret"
+      # Authentication Tokens
+        bearer_token = "op://Server-Prod/socials.twitter.eiprijzen API Credential/bearer_token"
+        access_token = "op://Server-Prod/socials.twitter.eiprijzen API Credential/access_token"
+        access_token_secret = "op://Server-Prod/socials.twitter.eiprijzen API Credential/access_token_secret"
+    [socials.twitter.eprijzen]
+      # Energie prijs paar keer per dag
+      activated = true
+      price_kind = "a" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = false
+      hourly_message = false
+      day_part_message_time = [8, 15]
+      morning_message_time = false
+      long_message_time = false
+      country_message_time = 9
+      windsolar_message_time = 18
+      hashtags = ["stroomprijzen", "gasprijzen", "stroomprijs", "gasprijs", "energieprijs", "stroomkosten"]
+      [socials.twitter.eprijzen.tokens]
+      # Consumer Keys
+        api_key = "op://Server-Prod/socials.twitter.eprijzen API Credential/api_key"
+        api_key_secret = "op://Server-Prod/socials.twitter.eprijzen API Credential/api_key_secret"
+        client_key = "op://Server-Prod/socials.twitter.eprijzen API Credential/client_key"
+        client_key_secret = "op://Server-Prod/socials.twitter.eprijzen API Credential/client_key_secret"
+      # Authentication Tokens
+        bearer_token = "op://Server-Prod/socials.twitter.eprijzen API Credential/bearer_token"
+        access_token = "op://Server-Prod/socials.twitter.eprijzen API Credential/access_token"
+        access_token_secret = "op://Server-Prod/socials.twitter.eprijzen API Credential/access_token_secret"
+    [socials.twitter.eipondernul]
+      # Energie inkoop prijs onder nul
+      activated = true
+      price_kind = "k" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = true
+      hourly_message = false
+      day_part_message_time = []
+      morning_message_time = false
+      long_message_time = false
+      country_message_time = false
+      windsolar_message_time = false
+      hashtags = ["energieinkoopondernul", "gratisstroom", "gratisenergie", "stroomprijsgratis", "zonnepanelenuit"]
+      [socials.twitter.eipondernul.tokens]
+      # Consumer Keys
+        api_key = "op://Server-Prod/socials.twitter.eipondernul API Credential/api_key"
+        api_key_secret = "op://Server-Prod/socials.twitter.eipondernul API Credential/api_key_secret"
+        client_key = "op://Server-Prod/socials.twitter.eipondernul API Credential/client_key"
+        client_key_secret = "op://Server-Prod/socials.twitter.eipondernul API Credential/client_key_secret"
+      # Authentication Tokens
+        bearer_token = "op://Server-Prod/socials.twitter.eipondernul API Credential/bearer_token"
+        access_token = "op://Server-Prod/socials.twitter.eipondernul API Credential/access_token"
+        access_token_secret = "op://Server-Prod/socials.twitter.eipondernul API Credential/access_token_secret"
+    [socials.twitter.epondernul]
+      # Energie All in prijs onder nul
+      activated = true
+      price_kind = "a" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = true
+      hourly_message = false
+      day_part_message_time = []
+      morning_message_time = false
+      long_message_time = false
+      country_message_time = false
+      windsolar_message_time = false
+      hashtags = ["energieondernul", "gratisstroom", "gratisenergie", "zonnepanelenuit", "autoladen", "ladenauto", "acculaden", "batterijladen"]
+      [socials.twitter.epondernul.tokens]
+      # Consumer Keys
+        api_key = "op://Server-Prod/socials.twitter.epondernul API Credential/api_key"
+        api_key_secret = "op://Server-Prod/socials.twitter.epondernul API Credential/api_key_secret"
+        client_key = "op://Server-Prod/socials.twitter.epondernul API Credential/client_key"
+        client_key_secret = "op://Server-Prod/socials.twitter.epondernul API Credential/client_key_secret"
+      # Authentication Tokens
+        bearer_token = "op://Server-Prod/socials.twitter.epondernul API Credential/bearer_token"
+        access_token = "op://Server-Prod/socials.twitter.epondernul API Credential/access_token"
+        access_token_secret = "op://Server-Prod/socials.twitter.epondernul API Credential/access_token_secret"
+    [socials.twitter.eprijzenperuur]
+      # Energie prijs per uur
+      activated = true
+      price_kind = "a" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = false
+      hourly_message = true
+      day_part_message_time = []
+      morning_message_time = false
+      long_message_time = false
+      country_message_time = false
+      windsolar_message_time = false
+      hashtags = ["energieperuur", "uurprijs", "prijsperuur", "stroomperuur", "gasprijs", "gasprijsperuur"]
+      [socials.twitter.eprijzenperuur.tokens]
+      # Consumer Keys
+        api_key = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/api_key"
+        api_key_secret = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/api_key_secret"
+        client_key = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/client_key"
+        client_key_secret = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/client_key_secret"
+      # Authentication Tokens
+        bearer_token = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/bearer_token"
+        access_token = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/access_token"
+        access_token_secret = "op://Server-Prod/socials.twitter.eprijzenperuur API Credential/access_token_secret"
+  [socials.facebook]
+    [socials.facebook.eprijzen]
+      activated = true
+      price_kind = "a" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = false
+      hourly_message = false
+      day_part_message_time = []
+      morning_message_time = 8
+      long_message_time = false
+      country_message_time = 9
+      windsolar_message_time = 17
+      token = "op://Server-Prod/ynbcezj2npdsiwwwgsbg3obr4e/token"
+      page_id = "op://Server-Prod/ynbcezj2npdsiwwwgsbg3obr4e/page_id"
+      app_id = "op://Server-Prod/ynbcezj2npdsiwwwgsbg3obr4e/app_id"
+      app_secret = "op://Server-Prod/ynbcezj2npdsiwwwgsbg3obr4e/app_secret"
+      client_id = "op://Server-Prod/ynbcezj2npdsiwwwgsbg3obr4e/client_id"
+  [socials.mastodon]
+    [socials.mastodon.eprijzen]
+      activated = true
+      price_kind = "a" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = false
+      hourly_message = false
+      day_part_message_time = []
+      morning_message_time = 8
+      long_message_time = 16
+      country_message_time = 9
+      windsolar_message_time = 17
+      url = "https://botsin.space/"
+      key = "op://Server-Prod/socials.mastodon.eprijzen API Credential/credential"
+    [socials.mastodon.eprijzenperuur]
+      activated = false
+      price_kind = "a" #['k', 'o', 'a', None], #Kaal, Opslag+, Allin
+      price_below_zero_message = false
+      hourly_message = true
+      day_part_message_time = []
+      morning_message_time = false
+      long_message_time = false
+      country_message_time = false
+      windsolar_message_time = false
+      url = "https://botsin.space/"
+      key = "op://Server-Prod/socials.mastodon.eprijzenperuur API Credential/credential"
+  [socials.instagram]
+    [socials.instagram.eprijzen]
+      activated = true
+      price_kind = "a"
+      price_below_zero_message = false
+      hourly_message = false
+      day_part_message_time = []
+      morning_message_time = 8
+      long_message_time = 16
+      country_message_time = 9
+      windsolar_message_time = 17
+      login = "op://Server-Prod/socials.instagram.eprijzen API Credential/login"
+      pwd = "op://Server-Prod/socials.instagram.eprijzen API Credential/pwd"
+      page_user_id = "op://Server-Prod/socials.instagram.eprijzen API Credential/page_user_id"
+      fb_page_id = "op://Server-Prod/socials.instagram.eprijzen API Credential/fb_page_id"
+      app_id = "op://Server-Prod/socials.instagram.eprijzen API Credential/app_id"
+      app_secret = "op://Server-Prod/socials.instagram.eprijzen API Credential/app_secret"
+      access_token = "op://Server-Prod/socials.instagram.eprijzen API Credential/access_token"
+
+
+# fill data from 1password
+#> APP_ENV=Prod op inject -i config_sample.ini -o production.ini
+#> APP_ENV=Dev op inject -i config_sample.ini -o development.ini

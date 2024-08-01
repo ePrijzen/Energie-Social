@@ -1,0 +1,21 @@
+[project]
+name = "social-energie-prijzen-bot"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Theo van der Sluijs <theo@vandersluijs.nl>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-aarch64"]
+
+[tasks]
+ePrijzenSocial = "python src/app.py"
+
+[activation.env]
+PY_ENV = "prod"
+
+[dependencies]
+apscheduler = ">=3.10.4,<3.11"
+requests = ">=2.32.3,<2.33"
+praw = ">=7.7.1,<7.8"
+toml = ">=0.10.2,<0.11"
+tweepy = ">=4.14.0,<4.15"
+"mastodon.py" = ">=1.8.1,<1.9"
